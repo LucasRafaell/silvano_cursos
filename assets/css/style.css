@@ -4,6 +4,7 @@ body {
     background-color: #f8f9fa;
 }
 
+/* Cards */
 .card {
     transition: all 0.3s ease;
     border: none;
@@ -22,13 +23,81 @@ body {
     object-fit: cover;
 }
 
+/* Botões */
 .btn-primary {
     background-color: #0d6efd;
     border: none;
     padding: 8px 16px;
+    transition: all 0.2s;
 }
 
-/* Validação de formulário */
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+    opacity: 0.7;
+}
+
+/* Formulários */
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    border-color: #86b7fe;
+}
+
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875em;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback {
+    display: block;
+}
+
 .was-validated .form-control:invalid {
     border-color: #dc3545;
+}
+
+/* Tabela admin */
+.table-responsive {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.status-select {
+    width: auto;
+    min-width: 120px;
+}
+
+/* Loaders e feedback */
+.spinner-border {
+    vertical-align: middle;
+}
+
+/* Modal */
+.modal-content {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 150px;
+    }
+    
+    .form-label {
+        font-size: 0.9rem;
+    }
+    
+    .table-responsive {
+        max-height: 60vh;
+    }
+    
+    .status-select {
+        min-width: 100%;
+    }
 }
